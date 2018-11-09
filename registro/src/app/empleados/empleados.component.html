@@ -1,0 +1,31 @@
+<div class="card">
+<div class="card-body">
+  <h2 class="card-title">Empleados</h2>
+  <div class="card-text">
+    <div class="table-responsive">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <td>Identidad</td>
+            <td>Nombre</td>
+            <td>Campo de Estudio</td>
+            <td>Edad</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let empleado of empleados" (click) = "onSelect(empleado)">
+            <td>{{empleado.identidad}}</td>
+            <td>{{empleado.nombre}}</td>
+            <td>{{empleado.estudio}}</td>
+            <td>{{empleado.edad}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+</div>
+
+<app-empleado-detalle [empleado]= "empleadoSeleccionado">
+
+</app-empleado-detalle>
